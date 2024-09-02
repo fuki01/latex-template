@@ -30,11 +30,11 @@ jobs:
         with:
           fetch-depth: 1
 
-      # docker-compose を使用してbuildを実行
+      # docker compose を使用してbuildを実行
       - name: Build
         run: |
-          docker-compose build pdf
-          docker-compose run pdf
+          docker compose build pdf
+          docker compose run pdf
 
       # 生成したPDFをGitHub Actionsにアップロードする
       - name: Upload artifact
